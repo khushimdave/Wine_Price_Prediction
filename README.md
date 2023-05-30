@@ -5,69 +5,154 @@ This project provides a predictive model for estimating wine prices based on var
 This code provides a predictive model for estimating wine prices based on various features. It preprocesses the input data, performs label encoding, and uses a trained model for making predictions. The code is designed to handle CSV files as input and generates an output file with predicted prices.
 
 **2.	Prerequisites**
+
+
+
 To use this code, you need the following:
+
+
 •	Python installed on your system (version 3.10.5).
+
+
 •	Required Python packages: (requirements.txt)
-o	joblib==1.2.0
-o	numpy==1.24.3
-o	pandas==2.0.1
-o	python-dateutil==2.8.2
-o	pytz==2023.3
-o	scikit-learn==1.0.2
-o	scipy==1.10.1
-o	six==1.16.0
-o	sklearn==0.0.post5
-o	threadpoolctl==3.1.0
-o	tzdata==2023.3
+
+_o	joblib==1.2.0_
+
+_o	numpy==1.24.3_
+
+_o	pandas==2.0.1_
+
+_o	python-dateutil==2.8.2_
+
+_o	pytz==2023.3_
+
+_o	scikit-learn==1.0.2_
+
+_o	scipy==1.10.1_
+
+_o	six==1.16.0_
+
+_o	sklearn==0.0.post5
+
+_o	threadpoolctl==3.1.0_
+
+_o	tzdata==2023.3_
+
 •	model.pkl file should be present in the same folder
 
 **3.	Installation**
+
+
+
 To install the required packages, follow these steps:
+
+
+
 i.	Open a terminal or command prompt.
+
 ii.	Navigate to the directory or the folder where you want to keep the code.
-cd path/to/code/directory
+
+_cd path/to/code/directory_
+
 iii.	Create a virtual environment (optional but recommended):
-python -m venv env
+
+_python -m venv env_
+
 iv.	Activate the virtual environment:
-For Windows: env\Scripts\activate
-For macOS/Linux: source env/bin/activate
+
+_For Windows: env\Scripts\activate_
+
+_For macOS/Linux: source env/bin/activate_
+
 v.	Install the required packages:
-pip install -r requirements.txt
+
+_pip install -r requirements.txt_
 
 **4.	Usage**
-python pipeline.py <dataset.csv>
+
+
+
+_python pipeline.py <dataset.csv>_
+
 Arguments:
+
 dataset.csv (required): Input CSV file containing wine data.
 
 **5.	Run the code**
+
+
+
 i.)	Prepare the CSV file:
+
 a.	The CSV file should contain the following columns: winery, wine, year, rating, num_reviews, region, type, body, acidity, and price (optional).
+
 b.	Save the CSV file in a location accessible by the code.
+
 ii.)	Open the terminal or command prompt.
+
+
 iii.)	Navigate to the directory containing the code files:
-cd path/to/code/directory
+
+
+_cd path/to/code/directory_
+
 iv.)	Activate the virtual environment (if created):
-For Windows: env\Scripts\activate
-For macOS/Linux: source env/bin/activate
+
+
+_For Windows: env\Scripts\activate_
+
+_For macOS/Linux: source env/bin/activate_
+
 v.)	Run the pipeline.py:
-a.	In the cmd only, in continuation, copy the code:
-python pipeline.py dataset.csv
+
+In the cmd only, in continuation, copy the code:
+
+_python pipeline.py dataset.csv_
  
+ 
+ 
 **6.	Functionality**
+
+
+
 The pipeline consists of the following steps:
-•	Drop Columns: The script drops columns from the input dataset that are not present in the predefined list of column names. If the dataset contains a "price" column, it is not dropped.
-•	Merge Price Dataset: If there is a "price" column in the dataset, it is temporarily removed, and the preprocessing steps are applied. After preprocessing, the predicted prices are merged back into the dataframe.
-•	Handle Missing Values and Change Datatypes: This step handles missing values and changes the datatypes of certain columns to avoid errors during preprocessing. The "type" column is filled with the mode value, the "acidity" column is filled with the median value, and the "year" column is filled and interpolated appropriately.
-•	Categorization: The "num_reviews" column is divided into four groups based on the number of reviews. The "rating" and "num_reviews_group" columns are used to categorize the data into different quality levels.
-•	Perform Label Encoding: Label encoding is applied to categorical columns such as "winery", "wine", "region", "type", and "combined_info". Unknown values are filled with "Unknown", and the original values are stored for later use.
-•	Use Pre-trained Model: The script loads the pre-trained machine learning model from a pickle file and uses it to predict the prices of wines.
-•	Merge Predictions: The predicted prices are merged back into the dataframe.
-•	Transform Encoded Data: The encoded values in the dataframe are replaced with their original values.
-•	Output: The preprocessed dataframe with predicted prices is saved as an output CSV file named "Output.csv".
+
+
+
+_•	Drop Columns:_ The script drops columns from the input dataset that are not present in the predefined list of column names. If the dataset contains a "price" column, it is not dropped.
+
+
+_•	Merge Price Dataset:_ If there is a "price" column in the dataset, it is temporarily removed, and the preprocessing steps are applied. After preprocessing, the predicted prices are merged back into the dataframe.
+
+
+_•	Handle Missing Values and Change Datatypes:_ This step handles missing values and changes the datatypes of certain columns to avoid errors during preprocessing. The "type" column is filled with the mode value, the "acidity" column is filled with the median value, and the "year" column is filled and interpolated appropriately.
+
+
+_•	Categorization:_ The "num_reviews" column is divided into four groups based on the number of reviews. The "rating" and "num_reviews_group" columns are used to categorize the data into different quality levels.
+
+
+_•	Perform Label Encoding:_ Label encoding is applied to categorical columns such as "winery", "wine", "region", "type", and "combined_info". Unknown values are filled with "Unknown", and the original values are stored for later use.
+
+
+_•	Use Pre-trained Model:_ The script loads the pre-trained machine learning model from a pickle file and uses it to predict the prices of wines.
+
+
+_•	Merge Predictions:_ The predicted prices are merged back into the dataframe.
+
+
+_•	Transform Encoded Data:_ The encoded values in the dataframe are replaced with their original values.
+
+
+_•	Output:_ The preprocessed dataframe with predicted prices is saved as an output CSV file named "Output.csv".
+
  
 **7.	Example**
+
+
+
 The below command will preprocess the wine data in the "sample_dataset.csv" file and generate an output CSV file named "Output.csv" with predicted prices.
-python pipeline.py sample_dataset.csv
+
+_python pipeline.py sample_dataset.csv_
  
  ![image](https://github.com/khushimdave/Wine_Price_Prediction/assets/94516006/8cb1068c-6d6c-4b1b-8be9-1199facad9f0)
 
@@ -76,33 +161,64 @@ Fig 7.1: Sample_dataset.csv
  ![image](https://github.com/khushimdave/Wine_Price_Prediction/assets/94516006/11657f11-e8d2-4263-b9b3-8a6446353342)
 
 Fig 7.2: Output
+
+
 Note: Please make sure to have the required dependencies installed before running the script.
 
+
+
 **8.	Model Comparision (Results & Interpretation)**
+
+
+
 Among the models that I have experimented with, here is a summary of their performance based on the evaluation metrics:
-Mean Squared Error (MSE):
+
+_Mean Squared Error (MSE):_
+
 The model with the lowest MSE is Gradient Boosted Regression Trees, with a value of 6387.0844502514.
+
 The model with the highest MSE is Linear Regression, with a value of 16553.065013070274.
-R2 Score:
+
+_R2 Score:_
+
 The model with the highest R2 score, indicating better prediction capability, is Gradient Boosted Regression Trees with a value of 0.7024446010804166.
+
 The model with the lowest R2 score is Linear Regression with a value of 0.22884159405281468.
+
 It appears that Gradient Boosted Regression Trees and Gradient Boosting Machines performed similarly in terms of MSE and R2 score, with slightly better results for Gradient Boosted Regression Trees.
 
-So, based on the results, I have used GRADIENT BOOSTED REGRESSSION TREES as my final model.
+
+So, based on the results, I have used _GRADIENT BOOSTED REGRESSSION TREES_ as my final model.
+
+
 
 **9.	Limitations**
+
+
+
 The code expects a specific column format in the input CSV file. Any deviations may result in errors or incorrect predictions.
+
 The code assumes that a pre-trained model named "model.pkl" is available in the same directory as the code file. Ensure that you have the trained model file before running the code.
 
+
+
 **10.	Conclusion**
+
+
+
 To conclude, this code provides a predictive model for estimating wine prices based on various features. It utilizes preprocessing techniques, label encoding, and a trained model to make predictions. By following the provided instructions, users can run the code on their dataset and generate an output file with predicted prices.
+
 
 The code has certain prerequisites, such as Python 3.10.5 and specific packages listed in the requirements.txt file. Users are advised to install these packages using a virtual environment for better isolation. Additionally, the code requires a pre-trained model file named "model.pkl" in the same directory.
 
+
 The functionality of the code involves dropping unnecessary columns, handling missing values, changing data types, categorizing data, performing label encoding, using the pre-trained model, merging predictions, transforming encoded data, and generating the output CSV file.
+
 
 A detailed example is provided to guide users through running the code on a sample dataset, showcasing the expected input format and the resulting output file.
 
+
 It's important to note that the code has certain limitations. It expects a specific column format in the input CSV file, and any deviations may lead to errors or incorrect predictions. Users should also ensure that the required dependencies and the pre-trained model file are present before running the code.
+
 
 In conclusion, this code provides a convenient solution for predicting wine prices based on given features, allowing users to make informed decisions and gain insights into wine valuation.
