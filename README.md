@@ -158,7 +158,8 @@ _python pipeline.py sample_dataset.csv_
 
 Fig 7.1: Sample_dataset.csv
 
- ![image](https://github.com/khushimdave/Wine_Price_Prediction/assets/94516006/11657f11-e8d2-4263-b9b3-8a6446353342)
+ ![Untitled](https://github.com/khushimdave/Wine_Price_Prediction/assets/94516006/1b88cf99-3b45-4c44-877a-38c7d377b726)
+
 
 Fig 7.2: Output
 
