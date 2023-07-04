@@ -16,27 +16,27 @@ To use this code, you need the following:
 
 •	Required Python packages: (requirements.txt)
 
-_o	joblib==1.2.0_
+- joblib==1.2.0
 
-_o	numpy==1.24.3_
+- numpy==1.24.3
 
-_o	pandas==2.0.1_
+- pandas==2.0.1
 
-_o	python-dateutil==2.8.2_
+- python-dateutil==2.8.2
 
-_o	pytz==2023.3_
+- pytz==2023.3
 
-_o	scikit-learn==1.0.2_
+- scikit-learn==1.0.2
 
-_o	scipy==1.10.1_
+- scipy==1.10.1
 
-_o	six==1.16.0_
+- six==1.16.0
 
-_o	sklearn==0.0.post5_
+- sklearn==0.0.post5
 
-_o	threadpoolctl==3.1.0_
+- threadpoolctl==3.1.0
 
-_o	tzdata==2023.3_
+- tzdata==2023.3
 
 •	model.pkl file should be present in the same folder
 
