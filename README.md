@@ -17,15 +17,25 @@ To use this code, you need the following:
 •	Required Python packages: (requirements.txt)
 
 _o	joblib==1.2.0_
+
 _o	numpy==1.24.3_
+
 _o	pandas==2.0.1_
+
 _o	python-dateutil==2.8.2_
+
 _o	pytz==2023.3_
+
 _o	scikit-learn==1.0.2_
+
 _o	scipy==1.10.1_
+
 _o	six==1.16.0_
+
 _o	sklearn==0.0.post5_
+
 _o	threadpoolctl==3.1.0_
+
 _o	tzdata==2023.3_
 
 •	model.pkl file should be present in the same folder
