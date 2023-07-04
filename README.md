@@ -52,41 +52,41 @@ i.	Open a terminal or command prompt.
 
 ii.	Navigate to the directory or the folder where you want to keep the code.
 
-'''cmd
+```cmd
 cd path/to/code/directory
-'''
+```
 
 iii.	Create a virtual environment (optional but recommended):
 
-'''cmd
+```cmd
 python -m venv env
-'''
+```
 
 iv.	Activate the virtual environment:
 
 _For Windows:_
-'''cmd
+```cmd
 env\Scripts\activate
-'''
+```
 
 _For macOS/Linux:_
-'''cmd
+```cmd
 source env/bin/activate
-'''
+```
 
 v.	Install the required packages:
 
-'''cmd
+```cmd
 pip install -r requirements.txt
-'''
+```
 
 **4.	Usage**
 
 
 
-'''cmd
+```cmd
 python pipeline.py <dataset.csv>
-'''
+```
 
 Arguments:
 
@@ -108,30 +108,30 @@ ii.)	Open the terminal or command prompt.
 iii.)	Navigate to the directory containing the code files:
 
 
-'''cmd
+```cmd
 cd path/to/code/directory
-'''
+```
 
 iv.)	Activate the virtual environment (if created):
 
 
 _For Windows:_
-'''cmd
+```cmd
 env\Scripts\activate
-'''
+```
 
 _For macOS/Linux:_ 
-'''cmd
+```cmd
 source env/bin/activate_
-'''
+```
 
 v.)	Run the pipeline.py:
 
 In the cmd only, in continuation, copy the code:
 
-'''cmd
+```cmd
 _python pipeline.py dataset.csv_
-'''
+```
 
  
  
@@ -176,9 +176,9 @@ _•	Output:_ The preprocessed dataframe with predicted prices is saved as an ou
 
 The below command will preprocess the wine data in the "sample_dataset.csv" file and generate an output CSV file named "Output.csv" with predicted prices.
 
-'''cmd
+```cmd
 python pipeline.py sample_dataset.csv
-'''
+```
  
  ![image](https://github.com/khushimdave/Wine_Price_Prediction/assets/94516006/8cb1068c-6d6c-4b1b-8be9-1199facad9f0)
 
